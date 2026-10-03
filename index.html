@@ -22,8 +22,9 @@
   .muted { color: var(--muted); font-size: 15px; }
   ul { padding-left: 22px; }
   li { margin: 6px 0; }
+  ul ul { margin: 4px 0; }
   a { color: var(--accent); }
-  nav a { margin-right: 16px; font-weight: 600; }
+  nav a { margin-right: 16px; font-weight: 600; display: inline-block; }
   .summary { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 20px; }
 </style>
 </head>
@@ -32,8 +33,8 @@
 <header>
   <div class="brand">Nippon2Go</div>
   <h1>Política de privacidad</h1>
-  <p class="muted">Última actualización: 2 de octubre de 2026</p>
-  <nav><a href="#es">Español</a><a href="#en" lang="en">English</a><a href="#eliminar-datos">Eliminar datos</a></nav>
+  <p class="muted">Última actualización: 3 de octubre de 2026</p>
+  <nav><a href="#es">Español</a><a href="#seguridad-datos">Seguridad de los datos</a><a href="#eliminar-datos">Eliminar datos</a><a href="#en" lang="en">English</a><a href="#data-safety" lang="en">Data safety</a><a href="#delete-data" lang="en">Delete data</a></nav>
 </header>
 
 <section id="es">
@@ -42,42 +43,65 @@
 <div class="summary">
 <h2>Resumen</h2>
 <ul>
-  <li>No tenemos servidores: tu viaje, tus rutas, tu checklist y tus preferencias se guardan solo en tu dispositivo.</li>
-  <li>No recogemos ni vendemos datos personales, no mostramos anuncios y no usamos herramientas de analítica ni de seguimiento.</li>
-  <li>Algunas funciones usan servicios de Google y de Wikimedia, que reciben los datos técnicos que necesitan para funcionar.</li>
+  <li>No tenemos servidores: tu viaje, tus rutas, tu checklist y tus preferencias se guardan en tu dispositivo. Nosotros no recibimos, no guardamos y no vendemos tus datos personales.</li>
+  <li>La app no muestra anuncios ni usa el identificador de publicidad de Android, y no le hemos añadido herramientas de analítica ni de publicidad (como Firebase Analytics o AdMob). La única analítica es la que hace el SDK de Google Maps, que explicamos a continuación.</li>
+  <li>Los mapas usan el SDK de Google Maps, que envía automáticamente a Google datos técnicos y de uso: un identificador seudónimo, informes de fallos, diagnósticos y tus interacciones con el mapa. Google los usa para prestar y mejorar sus servicios, también con fines analíticos, y por eso Google Play los muestra como datos recogidos y compartidos con Google. Lo explicamos en <a href="#google-maps">Google Maps Platform</a> y en <a href="#seguridad-datos">Seguridad de los datos en Google Play</a>.</li>
+  <li>La búsqueda de hoteles y las fotos de los lugares usan Google Places, y algunas fotos vienen de Wikimedia Commons. Estos servicios reciben los datos que necesitan para responder.</li>
 </ul>
 </div>
 
 <h2>Datos que se guardan en tu dispositivo</h2>
 <ul>
-  <li>Los datos de tu viaje: título, fechas, días, planes, lugares guardados, Mis rutas, tiempos de visita, alojamientos de referencia y checklist.</li>
+  <li>Los datos de tu viaje: título, fechas, días, planes y sus notas, lugares guardados, Mis rutas, tiempos de visita, alojamientos de referencia y checklist.</li>
   <li>Tus preferencias, como el idioma de la app y el ritmo de viaje.</li>
-  <li>Las fotos que elijas de tu galería para un lugar (modo administrador), que se copian en el almacenamiento privado de la app.</li>
 </ul>
-<p>Estos datos no salen de tu dispositivo y no nos llegan a nosotros. Puedes borrarlos desde la propia app, borrando los datos de la app en los ajustes de Android o desinstalándola.</p>
+<p>Nosotros no recibimos estos datos. Solo salen de tu dispositivo en los casos que explica esta política: cuando la app consulta a Google (por ejemplo, el identificador de tus alojamientos de referencia o la zona del mapa de un día), cuando abres un enlace externo o añades planes al calendario, y en la copia de seguridad de Android si la tienes activada (Android puede incluirlos en tu copia de seguridad de Google y en la transferencia de datos a un móvil nuevo). Puedes borrarlos desde la propia app, borrando los datos de la app en los ajustes de Android o desinstalándola.</p>
 
 <h2>Inicio de sesión con Google (opcional)</h2>
-<p>Si inicias sesión con Google en Perfil, Google entrega a la app tu nombre, tu dirección de email y la dirección de tu foto de perfil. La app los guarda solo en tu dispositivo para mostrarlos en Perfil: no se envían a nosotros ni a terceros, y no se guarda ningún token de acceso. Al cerrar sesión se borran. El inicio de sesión lo gestiona Google según su <a href="https://policies.google.com/privacy">política de privacidad</a>.</p>
+<p>Si inicias sesión con Google en Perfil, Google entrega a la app tu nombre, tu dirección de correo electrónico y el enlace (URL) de tu foto de perfil. La app los guarda en tu dispositivo para mostrarlos en Perfil y descarga tu foto de los servidores de Google. No se envían a nosotros ni a terceros, y no se guarda ningún token de acceso; como el resto de datos de la app, pueden incluirse en tu copia de seguridad de Android si la tienes activada. Al cerrar sesión, la app borra tu nombre, tu correo y el enlace de tu foto; la imagen de la foto puede quedar en la caché temporal de la app hasta que se vacíe. El inicio de sesión lo gestiona Google según su <a href="https://policies.google.com/privacy">política de privacidad</a>.</p>
 
 <h2>Calendario (opcional)</h2>
-<p>Si eliges «Añadir planificación al calendario», la app te pide permiso para usar el calendario del dispositivo. Lo usa para encontrar un calendario en el que se pueda escribir y añadir en él los planes de tu viaje (título, fecha y hora, lugar y notas), y para no duplicar los que ya añadió. Si ese calendario está sincronizado con una cuenta (por ejemplo, Google Calendar), los eventos se sincronizan según los ajustes de tu dispositivo.</p>
+<p>Si eliges «Añadir planificación al calendario», la app te pide permiso para usar el calendario del dispositivo. Solo consulta la lista de calendarios para encontrar uno en el que se pueda escribir: no lee tus eventos. Añade en él los planes de tu viaje (título, fecha y hora, lugar, notas, el nombre de tu viaje y un enlace al lugar en Google Maps) y recuerda en tu dispositivo cuáles ha añadido ya, para no duplicarlos. Si ese calendario está sincronizado con una cuenta (por ejemplo, Google Calendar), los eventos se sincronizan según los ajustes de tu dispositivo.</p>
 
 <h2>Servicios de terceros</h2>
 <ul>
-  <li><strong>Google Maps Platform</strong> (Maps SDK for Android y Places API): muestra los mapas, las fotos de los lugares y la búsqueda de hoteles. Google recibe lo necesario para responder, como la zona del mapa, el identificador del lugar o el texto que buscas, el idioma de la app y datos técnicos como tu dirección IP y el identificador de la app. <a href="https://policies.google.com/privacy">Política de privacidad de Google</a>.</li>
-  <li><strong>Wikimedia Commons</strong>: algunas fotos de lugares se descargan de sus servidores, que reciben tu dirección IP y datos técnicos de la conexión. <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Política de privacidad de Wikimedia</a>.</li>
-  <li><strong>Enlaces externos</strong>: la app abre páginas de Google Maps, Booking.com, Klook, Skyscanner, Holafly, Heymondo y Revolut en tu navegador o en sus apps. Algunos enlaces incluyen datos de búsqueda, como la ciudad o las fechas de tu estancia. Lo que hagas en esas páginas se rige por sus propias políticas de privacidad. Algunos enlaces pueden ser de afiliación: podríamos recibir una comisión si reservas, sin que la app comparta datos personales tuyos.</li>
+  <li id="google-maps"><strong>Google Maps Platform</strong> (Maps SDK for Android y Places API): se usa para los mapas, las fotos de los lugares y la búsqueda de hoteles. Google recibe:
+    <ul>
+      <li><strong>Del SDK de Google Maps</strong>, de forma automática cada vez que se muestra un mapa: la zona del mapa que se ve; datos del dispositivo y del SDK (como la versión de Android, la marca y el modelo del dispositivo o la versión del SDK); informes y métricas de fallos del SDK; tu dirección IP; un identificador seudónimo propio del SDK de Maps, que Google usa para contar los usuarios activos; y tus interacciones con el mapa, como desplazarlo o hacer zoom.</li>
+      <li><strong>De Google Places</strong>, cuando la app muestra fotos de los lugares del catálogo: el identificador del lugar; y cuando muestra el nombre y la dirección de tus alojamientos de referencia: su identificador y el idioma de la app. En ambos casos, también datos técnicos como tu dirección IP y el identificador de la app.</li>
+      <li><strong>Cuando buscas un hotel</strong>: el texto que escribes, la ciudad del viaje y el idioma de la app. La app no guarda el texto de búsqueda.</li>
+    </ul>
+    La app no pide permiso de ubicación y no envía la ubicación de tu dispositivo (GPS o red). Google recibe estos datos directamente y los usa para prestar, mantener y mejorar sus servicios (por ejemplo, para medir su uso y corregir fallos), según su <a href="https://policies.google.com/privacy">política de privacidad</a>. Nosotros no recibimos estos datos. El uso de los mapas también está sujeto a los <a href="https://maps.google.com/help/terms_maps/">Términos del Servicio Adicionales de Google Maps</a>.</li>
+  <li><strong>Wikimedia Commons</strong>: algunas fotos de lugares se descargan de sus servidores, que reciben tu dirección IP, datos técnicos de la conexión y el nombre y la versión de la app. Las fotos se guardan temporalmente en la caché de la app. <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Política de privacidad de Wikimedia</a>.</li>
+  <li><strong>Enlaces externos</strong>: la app abre en tu navegador o en sus apps páginas de Google Maps, Booking.com, Klook, Skyscanner, Holafly, Heymondo y Revolut, y las páginas de créditos de las fotos (Wikimedia Commons, Creative Commons y autores en Google Maps). Algunos enlaces incluyen datos de búsqueda, como la ciudad, el nombre del hotel, las fechas de tu estancia o el destino de una ruta. La app no les envía tu nombre, tu correo ni ningún identificador tuyo: solo los datos de búsqueda del enlace. Lo que hagas en esas páginas se rige por sus propias políticas de privacidad. Si en algún momento un enlace es de afiliación, podríamos recibir una comisión si reservas.</li>
 </ul>
 
-<h2 id="eliminar-datos">Cómo eliminar tu cuenta y tus datos</h2>
-<p>Nippon2Go no crea cuentas propias ni guarda datos en servidores: el inicio de sesión con Google solo sirve para mostrar tu nombre y tu foto en la app. Para eliminar tus datos:</p>
+<h2 id="seguridad-datos">Seguridad de los datos en Google Play</h2>
+<p>Según las definiciones de Google Play, los datos que el SDK de Google Maps y Google Places envían desde la app cuentan como datos «recogidos» por la app, aunque los recibe Google y no nosotros. Como Google también usa los datos del SDK de Google Maps para sus propios fines (mejorar sus servicios), esos datos constan además como «compartidos» con Google. Por eso, la sección «Seguridad de los datos» de Nippon2Go en Google Play declara:</p>
 <ul>
-  <li><strong>Datos de tu cuenta de Google en la app</strong> (nombre, email y foto): abre Nippon2Go, ve a Perfil y pulsa «Cerrar sesión». Se borran del dispositivo al momento.</li>
-  <li><strong>Todos tus datos</strong> (viaje, rutas, checklist, fotos y preferencias): en Android, abre Ajustes → Aplicaciones → Nippon2Go → Almacenamiento → Borrar datos, o desinstala la app. También puedes borrar planes, lugares y elementos de la checklist uno a uno dentro de la app.</li>
+  <li><strong>IDs de dispositivo o de otro tipo</strong>: el identificador seudónimo del SDK de Google Maps. Recogida obligatoria. Se comparte con Google. Finalidades: Funcionalidad de la aplicación y Análisis.</li>
+  <li><strong>Registros de fallos</strong>: los informes y métricas de fallos del SDK de Google Maps. Recogida obligatoria. Se comparte con Google. Finalidades: Funcionalidad de la aplicación y Análisis.</li>
+  <li><strong>Diagnósticos</strong>: los datos del dispositivo y del SDK que envía el SDK de Google Maps. Recogida obligatoria. Se comparte con Google. Finalidades: Funcionalidad de la aplicación y Análisis.</li>
+  <li><strong>Interacciones con la aplicación</strong>: cómo desplazas el mapa y haces zoom. Recogida obligatoria. Se comparte con Google. Finalidades: Funcionalidad de la aplicación y Análisis.</li>
+  <li><strong>Historial de búsquedas en la aplicación</strong>: el texto de tus búsquedas de hoteles, junto con la ciudad del viaje, y los identificadores de los alojamientos que eliges, para mostrar su nombre y su dirección. Recogida opcional: solo si buscas un hotel. No se comparte, porque eres tú quien inicia la búsqueda. Finalidad: Funcionalidad de la aplicación.</li>
+</ul>
+<p>Todos estos datos están cifrados durante el tránsito (HTTPS). La app no recoge la ubicación de tu dispositivo, tu nombre, tu correo electrónico, tus fotos ni tus eventos de calendario.</p>
+
+<h2 id="eliminar-datos">Cómo eliminar tu cuenta y tus datos</h2>
+<p class="muted" lang="en">In English: <a href="#delete-data">How to delete your account and your data</a></p>
+<p>Nippon2Go no crea cuentas propias ni guarda datos en servidores: el inicio de sesión con Google solo sirve para mostrar tu nombre, tu correo y tu foto en Perfil. Para eliminar tus datos:</p>
+<ul>
+  <li><strong>Datos de tu cuenta de Google en la app</strong> (nombre, correo y foto): abre Nippon2Go, ve a Perfil y pulsa «Cerrar sesión». Tu nombre, tu correo y el enlace de tu foto se borran del dispositivo al momento; la imagen de la foto puede quedar en la caché temporal hasta que se vacíe.</li>
+  <li><strong>Todos tus datos</strong> (viaje, rutas, checklist, preferencias y caché): en Android, abre Ajustes → Aplicaciones → Nippon2Go → Almacenamiento (o «Almacenamiento y caché») → Borrar datos (o «Borrar almacenamiento»), o desinstala la app; los nombres pueden variar según el móvil. También puedes borrar planes, lugares y elementos de la checklist uno a uno dentro de la app.</li>
+  <li><strong>Eventos añadidos al calendario</strong>: pasan a formar parte de tu calendario y no se borran al cerrar sesión, al borrar los datos de la app ni al desinstalarla. Bórralos desde tu app de calendario (y, si está sincronizado, desde Google Calendar).</li>
   <li><strong>Acceso de Nippon2Go a tu cuenta de Google</strong>: puedes retirarlo en <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</li>
   <li><strong>Copia de seguridad de Android</strong>: si la tienes activada, Android puede guardar una copia de los datos de la app en tu cuenta de Google; puedes borrarla desde Google Drive → Copias de seguridad.</li>
+  <li><strong>Datos que recibe Google</strong> a través del SDK de Google Maps y de Google Places: nosotros no los recibimos ni podemos borrarlos. Google los conserva y los elimina según su <a href="https://policies.google.com/privacy">política de privacidad</a>, y puedes ejercer tus derechos ante Google.</li>
 </ul>
-<p>No conservamos ningún dato: al no tener servidores, no hay copias de tus datos en nuestro poder ni periodos de retención. Si necesitas ayuda, escríbenos a <a href="mailto:saxsolrac@gmail.com">saxsolrac@gmail.com</a>.</p>
+<p>No conservamos ningún dato: al no tener servidores, no hay copias de tus datos en nuestro poder ni plazos de conservación. Si quieres solicitar la eliminación de tus datos o necesitas ayuda, escríbenos a <a href="mailto:saxsolrac@gmail.com">saxsolrac@gmail.com</a>.</p>
+
+<h2>Seguridad</h2>
+<p>Los datos de la app se guardan en su almacenamiento privado de Android, al que no pueden acceder otras apps. Todas las conexiones de la app usan HTTPS. No guardamos tus datos en servidores.</p>
 
 <h2>Menores</h2>
 <p>La app no está dirigida a menores de 13 años y no recoge de forma consciente datos de menores.</p>
@@ -91,48 +115,70 @@
 
 <section id="en" lang="en">
 <h2 class="lang">Privacy Policy (English)</h2>
-<p class="muted">Last updated: 2 October 2026</p>
+<p class="muted">Last updated: 3 October 2026</p>
 <p>Nippon2Go is an app for planning trips to Japan, developed by saxsolrac (“we”). This policy explains what data the app uses, why, and who it is shared with.</p>
 
 <div class="summary">
 <h2>Summary</h2>
 <ul>
-  <li>We have no servers: your trip, routes, checklist and preferences are stored only on your device.</li>
-  <li>We don’t collect or sell personal data, we show no ads and we use no analytics or tracking tools.</li>
-  <li>Some features use Google and Wikimedia services, which receive the technical data they need to work.</li>
+  <li>We have no servers: your trip, routes, checklist and preferences are stored on your device. We don’t receive, store or sell your personal data.</li>
+  <li>The app shows no ads and doesn’t use the Android advertising ID, and we haven’t added any analytics or advertising tools to it (such as Firebase Analytics or AdMob). The only analytics are those done by the Google Maps SDK, explained below.</li>
+  <li>The maps use the Google Maps SDK, which automatically sends technical and usage data to Google: a pseudonymous identifier, crash reports, diagnostics and your interactions with the map. Google uses it to provide and improve its services, including for analytics, which is why Google Play shows it as data collected and shared with Google. See <a href="#google-maps-en">Google Maps Platform</a> and <a href="#data-safety">Data safety on Google Play</a>.</li>
+  <li>Hotel search and place photos use Google Places, and some photos come from Wikimedia Commons. These services receive the data they need to respond.</li>
 </ul>
 </div>
 
 <h2>Data stored on your device</h2>
 <ul>
-  <li>Your trip data: title, dates, days, plans, saved places, My routes, visit times, reference accommodation and checklist.</li>
+  <li>Your trip data: title, dates, days, plans and their notes, saved places, My routes, visit times, reference accommodation and checklist.</li>
   <li>Your preferences, such as the app language and the travel pace.</li>
-  <li>Photos you choose from your gallery for a place (admin mode), which are copied into the app’s private storage.</li>
 </ul>
-<p>This data never leaves your device and never reaches us. You can delete it in the app, by clearing the app’s data in Android settings, or by uninstalling the app.</p>
+<p>We don’t receive this data. It only leaves your device in the cases this policy describes: when the app queries Google (for example, the identifier of your reference accommodation or the map area of a day), when you open an external link or add plans to your calendar, and in Android backup if it is turned on (Android may include it in your Google backup and in transfers to a new phone). You can delete it in the app, by clearing the app’s data in Android settings, or by uninstalling the app.</p>
 
 <h2>Sign in with Google (optional)</h2>
-<p>If you sign in with Google in Profile, Google gives the app your name, email address and profile photo address. The app stores them only on your device to show them in Profile: they are not sent to us or to anyone else, and no access token is stored. Signing out deletes them. Google handles the sign-in under its <a href="https://policies.google.com/privacy">privacy policy</a>.</p>
+<p>If you sign in with Google in Profile, Google gives the app your name, email address and profile photo URL. The app stores them on your device to show them in Profile, and downloads your photo from Google’s servers. They are not sent to us or to anyone else, and no access token is stored; like the rest of the app’s data, they may be included in your Android backup if it is turned on. Signing out deletes your name, email and photo URL; the photo image itself may stay in the app’s temporary cache until it is cleared. Google handles the sign-in under its <a href="https://policies.google.com/privacy">Privacy Policy</a>.</p>
 
 <h2>Calendar (optional)</h2>
-<p>If you choose “Add itinerary to calendar”, the app asks for permission to use the device calendar. It uses it to find a calendar it can write to, add your trip’s plans there (title, date and time, place and notes), and avoid duplicating the ones it already added. If that calendar is synced with an account (such as Google Calendar), the events sync according to your device settings.</p>
+<p>If you choose “Add itinerary to calendar”, the app asks for permission to use the device calendar. It only looks at the list of calendars to find one it can write to: it doesn’t read your events. It adds your trip’s plans there (title, date and time, place, notes, your trip’s name and a Google Maps link to the place) and remembers on your device which ones it has already added, to avoid duplicates. If that calendar is synced with an account (such as Google Calendar), the events sync according to your device settings.</p>
 
 <h2>Third-party services</h2>
 <ul>
-  <li><strong>Google Maps Platform</strong> (Maps SDK for Android and Places API): shows the maps, the photos of places and the hotel search. Google receives what it needs to respond, such as the map area, the place identifier or the text you search for, the app language, and technical data such as your IP address and the app identifier. <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
-  <li><strong>Wikimedia Commons</strong>: some photos of places are downloaded from its servers, which receive your IP address and technical connection data. <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Privacy Policy</a>.</li>
-  <li><strong>External links</strong>: the app opens Google Maps, Booking.com, Klook, Skyscanner, Holafly, Heymondo and Revolut pages in your browser or their apps. Some links include search details, such as the city or the dates of your stay. What you do on those pages is governed by their own privacy policies. Some links may be affiliate links: we might earn a commission if you book, without the app sharing any of your personal data.</li>
+  <li id="google-maps-en"><strong>Google Maps Platform</strong> (Maps SDK for Android and Places API): powers the maps, place photos and hotel search. Google receives:
+    <ul>
+      <li><strong>From the Google Maps SDK</strong>, automatically whenever a map is shown: the map area on screen; device and SDK details (such as the Android version, device brand and model, and SDK version); crash reports and crash metrics from the SDK; your IP address; a pseudonymous identifier specific to the Maps SDK, which Google uses to count active users; and your interactions with the map, such as panning and zooming.</li>
+      <li><strong>From Google Places</strong>, when the app shows photos of catalogue places: the place identifier; and when it shows the name and address of your reference accommodation: its identifier and the app language. In both cases, also technical data such as your IP address and the app identifier.</li>
+      <li><strong>When you search for a hotel</strong>: the text you type, the trip city and the app language. The app doesn’t store your search text.</li>
+    </ul>
+    The app doesn’t ask for location permission and doesn’t send your device’s location (GPS or network). Google receives this data directly and uses it to provide, maintain and improve its services (for example, to measure usage and fix crashes), under its <a href="https://policies.google.com/privacy">Privacy Policy</a>. We don’t receive this data. Use of the maps is also subject to the <a href="https://maps.google.com/help/terms_maps/">Google Maps Additional Terms of Service</a>.</li>
+  <li><strong>Wikimedia Commons</strong>: some photos of places are downloaded from its servers, which receive your IP address, technical connection data, and the app’s name and version. The photos are kept temporarily in the app’s cache. <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Privacy Policy</a>.</li>
+  <li><strong>External links</strong>: the app opens Google Maps, Booking.com, Klook, Skyscanner, Holafly, Heymondo and Revolut pages in your browser or their apps, plus photo credit pages (Wikimedia Commons, Creative Commons and authors on Google Maps). Some links include search details, such as the city, the hotel name, the dates of your stay or the destination of a route. The app doesn’t send them your name, email or any identifier: only the search details in the link. What you do on those pages is governed by their own privacy policies. If a link ever becomes an affiliate link, we might earn a commission if you book.</li>
 </ul>
 
-<h2 id="delete-data">How to delete your account and your data</h2>
-<p>Nippon2Go creates no accounts of its own and stores no data on servers: signing in with Google only shows your name and photo in the app. To delete your data:</p>
+<h2 id="data-safety">Data safety on Google Play</h2>
+<p>Under Google Play’s definitions, the data that the Google Maps SDK and Google Places send from the app counts as data “collected” by the app, even though Google receives it, not us. Because Google also uses the Google Maps SDK data for its own purposes (improving its services), that data is also listed as “shared” with Google. That is why Nippon2Go’s Data safety section on Google Play declares:</p>
 <ul>
-  <li><strong>Your Google account details in the app</strong> (name, email and photo): open Nippon2Go, go to Profile and tap “Sign out”. They are deleted from the device straight away.</li>
-  <li><strong>All your data</strong> (trip, routes, checklist, photos and preferences): on Android, open Settings → Apps → Nippon2Go → Storage → Clear data, or uninstall the app. You can also delete plans, places and checklist items one by one in the app.</li>
+  <li><strong>Device or other IDs</strong>: the Google Maps SDK’s pseudonymous identifier. Required. Shared with Google. Purposes: App functionality, Analytics.</li>
+  <li><strong>Crash logs</strong>: crash reports and crash metrics from the Google Maps SDK. Required. Shared with Google. Purposes: App functionality, Analytics.</li>
+  <li><strong>Diagnostics</strong>: the device and SDK details sent by the Google Maps SDK. Required. Shared with Google. Purposes: App functionality, Analytics.</li>
+  <li><strong>App interactions</strong>: how you pan and zoom the map. Required. Shared with Google. Purposes: App functionality, Analytics.</li>
+  <li><strong>In-app search history</strong>: the text of your hotel searches, together with the trip city, and the identifiers of the accommodation you choose, to show its name and address. Optional: only if you search for a hotel. Not shared, because you start the search yourself. Purpose: App functionality.</li>
+</ul>
+<p>All of this data is encrypted in transit (HTTPS). The app doesn’t collect your device’s location, your name, email address, photos or calendar events.</p>
+
+<h2 id="delete-data">How to delete your account and your data</h2>
+<p>Nippon2Go creates no accounts of its own and stores no data on servers: signing in with Google is only used to show your name, email and photo in Profile. To delete your data:</p>
+<ul>
+  <li><strong>Your Google account details in the app</strong> (name, email and photo): open Nippon2Go, go to Profile and tap “Sign out”. Your name, email and photo URL are deleted from the device straight away; the photo image may stay in the temporary cache until it is cleared.</li>
+  <li><strong>All your data</strong> (trip, routes, checklist, preferences and cache): on Android, open Settings → Apps → Nippon2Go → Storage (or “Storage &amp; cache”) → Clear data (or “Clear storage”), or uninstall the app; names may vary by device. You can also delete plans, places and checklist items one by one in the app.</li>
+  <li><strong>Events added to your calendar</strong>: they become part of your calendar and are not removed when you sign out, clear the app’s data or uninstall the app. Delete them in your calendar app (and, if it is synced, in Google Calendar).</li>
   <li><strong>Nippon2Go’s access to your Google account</strong>: you can remove it at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</li>
   <li><strong>Android backup</strong>: if it is turned on, Android may keep a copy of the app’s data in your Google account; you can delete it in Google Drive → Backups.</li>
+  <li><strong>Data Google receives</strong> through the Google Maps SDK and Google Places: we don’t receive it and can’t delete it. Google keeps and deletes it under its <a href="https://policies.google.com/privacy">Privacy Policy</a>, and you can exercise your rights with Google.</li>
 </ul>
-<p>We keep no data: as we have no servers, we hold no copies of your data and there are no retention periods. If you need help, write to <a href="mailto:saxsolrac@gmail.com">saxsolrac@gmail.com</a>.</p>
+<p>We keep no data: as we have no servers, we hold no copies of your data and there are no retention periods. To request deletion of your data or get help, write to <a href="mailto:saxsolrac@gmail.com">saxsolrac@gmail.com</a>.</p>
+
+<h2>Security</h2>
+<p>The app’s data is kept in its private Android storage, which other apps can’t access. All of the app’s connections use HTTPS. We don’t store your data on servers.</p>
 
 <h2>Children</h2>
 <p>The app is not directed at children under 13 and does not knowingly collect data from children.</p>
